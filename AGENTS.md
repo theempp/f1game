@@ -1,5 +1,9 @@
 # Pocket Grand Prix
 
+## Current 3D implementation (2026-09-19)
+
+Read 3D-UPGRADE.md and the UPDATE section at the end of JOB.md. Gameplay now uses race3d.js / race3d.css and locally vendored Three.js. game.js retains progression and arcade physics with elevation-aware track projection. Two previously generated GLBs live in public/models. No new paid generation was used. Historical 2D handoff notes below describe the earlier version, not the current renderer. Preserve the existing localStorage key and do not replace user assets or unrelated changes.
+
 This project is already signed and implemented. Read JOB.md as the work order and source of truth. Do not restart direction selection or look elsewhere for a website kickoff.
 
 - User approved miniature paddock presentation with technical garage controls.
@@ -20,3 +24,6 @@ Known scope: race graphics are top-down 2D; lobby car images are Blender renders
 Verification completed: three full races through actual steering/acceleration physics, both level unlocks, all six upgrade effects, reload persistence, pause/recovery, desktop 1440×900, mobile 393×852, reduced motion and 4× CPU functional checks. Zero JavaScript errors. Tests use isolated Chrome, not the user's profile.
 
 Remote: https://github.com/theempp/f1game . User requested saving, committing and pushing the entire project, including reference images and editable Blender sources.
+
+## Latest handoff (2026-09-20)
+Read HANDOFF.md for the locked Alpine Circuit Diorama V3 and continuation context. V3 is the approved standalone model; do not regenerate it or integrate it into the game unless requested. User requests efficient token use. All prior game constraints remain in effect.

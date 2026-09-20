@@ -1,0 +1,15 @@
+{
+  "mesh_objects": 2281,
+  "unique_meshes": 2593,
+  "triangles_unique": 413932,
+  "tree_instances": 110,
+  "materials": 31,
+  "uv_missing": [],
+  "track_length_m": 34.039736299506394,
+  "track_width_min_m": 0.266,
+  "track_width_max_m": 0.3135,
+  "spectators": 280,
+  "grandstand_sections": 4,
+  "jumbotrons": 2,
+  "tunnel_length_m": 4.093430103172873
+}

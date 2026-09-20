@@ -1,0 +1,30 @@
+"use client";
+import { motion, useReducedMotion } from "motion/react";
+import * as React from "react";
+import { cn } from "@/lib/utils";
+const componentThemeClassName = "[--ic-background:#ffffff] [--ic-foreground:#111111] [--ic-border:#e3e7ec] [--ic-card:#ffffff] [--ic-ring:rgba(17,17,17,0.16)]";
+const FILL_DURATION = 0.5;
+const FILL_EASE = [0.16, 1, 0.3, 1] as const;
+type ButtonHTMLAttributesForMotion = Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, "onAnimationEnd" | "onAnimationIteration" | "onAnimationStart" | "onDrag" | "onDragEnd" | "onDragEnter" | "onDragExit" | "onDragLeave" | "onDragOver" | "onDragStart" | "onDrop">;
+function getCoverDiameter(width:number,height:number,x:number,y:number) { return Math.ceil(2*Math.max(Math.hypot(x,y),Math.hypot(width-x,y),Math.hypot(x,height-y),Math.hypot(width-x,height-y))); }
+function assignRef<T>(ref:React.ForwardedRef<T>,value:T|null) { if(typeof ref==='function')ref(value);else if(ref)ref.current=value; }
+function hasTextContent(node:React.ReactNode):boolean { if(typeof node==='string'||typeof node==='number')return String(node).trim().length>0;if(Array.isArray(node))return node.some(hasTextContent);if(React.isValidElement<{children?:React.ReactNode}>(node))return hasTextContent(node.props.children);return false; }
+type OriginButtonProps = ButtonHTMLAttributesForMotion & {children?:React.ReactNode;loading?:boolean};
+const OriginButton=React.forwardRef<HTMLButtonElement,OriginButtonProps>(({children,className,disabled=false,loading=false,type='button',onBlur,onClick,onFocus,onKeyDown,onKeyUp,onPointerCancel,onPointerDown,onPointerEnter,onPointerLeave,onPointerUp,...props},ref)=>{
+ const buttonRef=React.useRef<HTMLButtonElement>(null),isDisabled=Boolean(disabled||loading);
+ const [hovered,setHovered]=React.useState(false),[isPressed,setIsPressed]=React.useState(false),[origin,setOrigin]=React.useState({x:0,y:0}),[coverSize,setCoverSize]=React.useState(0);
+ const reduced=useReducedMotion();
+ const ariaLabel=props['aria-label'],ariaLabelledBy=props['aria-labelledby'];
+ React.useEffect(()=>{if(!hasTextContent(children)&&!ariaLabel?.trim()&&!ariaLabelledBy?.trim())console.warn('OriginButton: provide visible label text or aria-label / aria-labelledby so the control has an accessible name.');},[children,ariaLabel,ariaLabelledBy]);
+ const updateOrigin=React.useCallback((x:number,y:number)=>{const node=buttonRef.current;if(!node)return;const rect=node.getBoundingClientRect();setOrigin({x,y});setCoverSize(getCoverDiameter(rect.width,rect.height,x,y));},[]);
+ const updateOriginFromPointer=React.useCallback((event:React.PointerEvent<HTMLButtonElement>)=>{const rect=event.currentTarget.getBoundingClientRect();updateOrigin(event.clientX-rect.left,event.clientY-rect.top);},[updateOrigin]);
+ const updateOriginFromCenter=React.useCallback(()=>{const node=buttonRef.current;if(!node)return;const rect=node.getBoundingClientRect();updateOrigin(rect.width/2,rect.height/2);},[updateOrigin]);
+ const showFill=!isDisabled&&(hovered||isPressed);
+ React.useLayoutEffect(()=>{const node=buttonRef.current;if(!(node&&showFill))return;const measure=()=>{const rect=node.getBoundingClientRect();setCoverSize(getCoverDiameter(rect.width,rect.height,origin.x,origin.y));};measure();const observer=new ResizeObserver(measure);observer.observe(node);document.fonts?.ready.then(measure).catch(()=>undefined);return()=>observer.disconnect();},[showFill,origin.x,origin.y]);
+ const setMergedRef=React.useCallback((node:HTMLButtonElement|null)=>{buttonRef.current=node;assignRef(ref,node);},[ref]);
+ return <motion.button {...props} aria-busy={loading||undefined} className={cn(componentThemeClassName,'origin-button relative inline-flex h-12 cursor-pointer touch-manipulation select-none items-center justify-center overflow-hidden rounded-xl px-8 font-medium text-[15px] tracking-[-0.02em]','border-[0.5px] border-border bg-card text-card-foreground','transition-[color] duration-300 ease-[cubic-bezier(0.16,1,0.3,1)]','focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background','disabled:pointer-events-none disabled:opacity-50',showFill&&'text-background',className)} data-fill={showFill} data-pressed={isPressed?'true':'false'} disabled={isDisabled} onBlur={e=>{onBlur?.(e);setIsPressed(false);if(!e.defaultPrevented)setHovered(false);}} onClick={onClick} onFocus={e=>{onFocus?.(e);if(isDisabled||e.defaultPrevented)return;if(e.currentTarget.matches(':focus-visible')){updateOriginFromCenter();setHovered(true);}}} onKeyDown={e=>{onKeyDown?.(e);if(e.defaultPrevented||isDisabled||e.repeat||(e.key!==' '&&e.key!=='Enter'))return;updateOriginFromCenter();setIsPressed(true);setHovered(true);}} onKeyUp={e=>{onKeyUp?.(e);if(e.key===' '||e.key==='Enter'){setIsPressed(false);if(!e.currentTarget.matches(':focus-visible'))setHovered(false);}}} onPointerCancel={e=>{onPointerCancel?.(e);setIsPressed(false);}} onPointerDown={e=>{onPointerDown?.(e);if(e.defaultPrevented||isDisabled||e.button!==0)return;updateOriginFromPointer(e);setIsPressed(true);setHovered(true);}} onPointerEnter={e=>{onPointerEnter?.(e);if(isDisabled||e.defaultPrevented)return;updateOriginFromPointer(e);setHovered(true);}} onPointerLeave={e=>{onPointerLeave?.(e);setHovered(false);setIsPressed(false);}} onPointerUp={e=>{onPointerUp?.(e);setIsPressed(false);}} ref={setMergedRef} type={type} whileTap={isDisabled||reduced?undefined:{scale:.985}}>
+ <motion.span animate={{scale:showFill&&coverSize>0?1:0}} aria-hidden className="pointer-events-none absolute -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground" initial={false} style={{height:coverSize,left:origin.x,top:origin.y,width:coverSize}} transition={{duration:reduced?0:FILL_DURATION,ease:FILL_EASE}}/>
+ <span className="relative z-10 inline-flex items-center justify-center gap-2">{children}</span></motion.button>;
+});
+OriginButton.displayName='OriginButton';
+export { OriginButton };export type { OriginButtonProps };

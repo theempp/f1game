@@ -1,0 +1,12 @@
+@layer theme, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/utilities.css" layer(utilities);
+@source "../components";
+@theme inline {
+ --color-background: var(--ic-background);
+ --color-foreground: var(--ic-foreground);
+ --color-border: var(--ic-border);
+ --color-card: var(--ic-card);
+ --color-card-foreground: var(--ic-foreground);
+ --color-ring: var(--ic-ring);
+}

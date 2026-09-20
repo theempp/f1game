@@ -1,0 +1,26 @@
+{
+  "close_road_conflicts": 0,
+  "crossings": [
+    {
+      "xy": [
+        0.878,
+        0.375
+      ],
+      "deck_separation_m": 0.328
+    },
+    {
+      "xy": [
+        0.953,
+        -0.312
+      ],
+      "deck_separation_m": 0.414
+    },
+    {
+      "xy": [
+        0.442,
+        -0.566
+      ],
+      "deck_separation_m": 0.323
+    }
+  ]
+}

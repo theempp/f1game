@@ -1,0 +1,9 @@
+{
+  "grandstands": 10,
+  "stand_length_m": 2.660625,
+  "stand_height_m": 0.7875,
+  "size_multiplier_length_and_height": 3,
+  "spectators": 6300,
+  "jumbotrons": 0,
+  "facing": "All fronts and seated spectators face inward toward the circuit"
+}

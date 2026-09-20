@@ -1,0 +1,27 @@
+{
+  "close_road_conflicts": 0,
+  "method": "Road conflict check in original design coordinates; planar expansion preserves disjointness. Crossing positions are expanded metres.",
+  "crossings": [
+    {
+      "xy": [
+        1.229,
+        0.619
+      ],
+      "deck_separation_m": 0.328
+    },
+    {
+      "xy": [
+        1.334,
+        -0.515
+      ],
+      "deck_separation_m": 0.414
+    },
+    {
+      "xy": [
+        0.618,
+        -0.933
+      ],
+      "deck_separation_m": 0.323
+    }
+  ]
+}

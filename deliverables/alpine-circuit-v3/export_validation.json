@@ -1,0 +1,480 @@
+{
+  "glb": {
+    "file_bytes": 20960292,
+    "mesh_objects": 8475,
+    "unique_meshes": 1890,
+    "materials": 28,
+    "cameras": 4,
+    "bounds_m": [
+      [
+        -3.950000047683716,
+        3.950000047683716
+      ],
+      [
+        -5.625,
+        5.625
+      ],
+      [
+        -0.10625000298023224,
+        0.91764897108078
+      ]
+    ],
+    "missing_uv": [],
+    "invalid_coordinates": [],
+    "image_textures": [
+      {
+        "name": "Alpine \u2022 clipped meadow_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Alpine \u2022 clipped meadow_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Asphalt \u2022 charcoal aggregate_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Asphalt \u2022 charcoal aggregate_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 0_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 0_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 1_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 1_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 2_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 2_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 3_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 3_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 4_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 4_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Grandstand \u2022 light concrete_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Grandstand \u2022 light concrete_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Kerb \u2022 vermilion paint_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Kerb \u2022 vermilion paint_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Kerb \u2022 warm porcelain_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Kerb \u2022 warm porcelain_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Rock \u2022 weathered limestone_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Rock \u2022 weathered limestone_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Tree \u2022 bark_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Tree \u2022 bark_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Tunnel \u2022 architectural graphite_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Tunnel \u2022 architectural graphite_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      }
+    ],
+    "example_tree_materials": [
+      "Tree \u2022 bark",
+      "Foliage \u2022 3"
+    ],
+    "spectators": 6300,
+    "jumbotrons": 0
+  },
+  "fbx": {
+    "file_bytes": 16201084,
+    "mesh_objects": 8475,
+    "unique_meshes": 1890,
+    "materials": 28,
+    "cameras": 4,
+    "bounds_m": [
+      [
+        -3.950000047683716,
+        3.950000047683716
+      ],
+      [
+        -5.625,
+        5.625
+      ],
+      [
+        -0.10625091940164566,
+        0.9176487326622009
+      ]
+    ],
+    "missing_uv": [],
+    "invalid_coordinates": [],
+    "image_textures": [
+      {
+        "name": "Alpine \u2022 clipped meadow_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Alpine \u2022 clipped meadow_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Asphalt \u2022 charcoal aggregate_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Asphalt \u2022 charcoal aggregate_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 0_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 0_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 1_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 1_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 2_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 2_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 3_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 3_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 4_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Foliage \u2022 4_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Grandstand \u2022 light concrete_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Grandstand \u2022 light concrete_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Kerb \u2022 vermilion paint_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Kerb \u2022 vermilion paint_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Kerb \u2022 warm porcelain_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Kerb \u2022 warm porcelain_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Rock \u2022 weathered limestone_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Rock \u2022 weathered limestone_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Tree \u2022 bark_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Tree \u2022 bark_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Tunnel \u2022 architectural graphite_Albedo",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      },
+      {
+        "name": "Tunnel \u2022 architectural graphite_Roughness",
+        "size": [
+          256,
+          256
+        ],
+        "packed": true
+      }
+    ],
+    "example_tree_materials": [
+      "Tree \u2022 bark",
+      "Foliage \u2022 3"
+    ],
+    "spectators": 6300,
+    "jumbotrons": 0
+  }
+}
