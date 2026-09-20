@@ -1,5 +1,9 @@
 # Pocket Grand Prix
 
+## Current 3D implementation (2026-09-19)
+
+Read 3D-UPGRADE.md and the UPDATE section at the end of JOB.md. Gameplay now uses race3d.js / race3d.css and locally vendored Three.js. game.js retains progression and arcade physics with elevation-aware track projection. Two previously generated GLBs live in public/models. No new paid generation was used. Historical 2D handoff notes below describe the earlier version, not the current renderer. Preserve the existing localStorage key and do not replace user assets or unrelated changes.
+
 This project is already signed and implemented. Read JOB.md as the work order and source of truth. Do not restart direction selection or look elsewhere for a website kickoff.
 
 - User approved miniature paddock presentation with technical garage controls.
