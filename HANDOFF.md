@@ -21,3 +21,6 @@ The diorama has NOT been integrated into gameplay. The repository also includes 
 
 ## Constraints
 No paid generation, credits, or external asset uploads without explicit approval. No paid generation was used for the diorama. Preserve unrelated project changes and user assets. Existing reference-image deletions were already present before the diorama work and are included as part of the user-requested complete project save.
+
+## Gameplay integration — 2026-09-20
+User requested V3 live in game. Alpine Circuit V3 is now the default fourth circuit. Original GLB is loaded intact with instanced repeated scenery and merged static geometry. Exact 720-point road centerline extracted to public/models/alpine-path.json by scripts/export-track-path.py. Removed legacy coordinate clamps that blocked the larger course. Both imported car templates rotated 180 degrees to face forward. Full detail, up to 2× pixel density, 4096 shadows and maximum texture anisotropy; daylight uses native antialiasing. Three-lap physics test passed in 202.32 simulated seconds; zero browser errors. Headless 1440×900 measurement approximately 30 fps (104 visible draw calls). No claim of 60 fps. Original assets and saved-progress key preserved. Local server running on 4186; no commit or push requested this turn.

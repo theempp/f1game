@@ -75,3 +75,5 @@ QA: TypeScript and production build pass. Isolated Chrome desktop 1440×900 and 
 
 UPDATE 2026-09-20 — Alpine Circuit Diorama V3 LOCKED by user.
 Standalone editable model and previews: deliverables/alpine-circuit-v3. Complete ZIP: deliverables/Alpine_Circuit_Diorama_V3_Complete.zip. Wider/longer course, extended LED tunnel, ten inward-facing grandstands at 3× prior length and height, 6,300 spectators, large Jumbotrons removed. Both GLB/FBX reimport-verified. Not integrated into gameplay. User requested saving and pushing the complete project for a new chat; keep token usage economical. Read HANDOFF.md first for continuation.
+
+UPDATE 2026-09-20 — V3 integrated at user request as default playable circuit. Exact road centerline, scenery batching, forward-facing imported cars, expanded gameplay bounds and high-quality rendering. Three complete laps verified; approximately 30 fps in isolated desktop test. See HANDOFF.md. No paid generation.
